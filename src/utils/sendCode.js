@@ -5,7 +5,7 @@ export const sendCode = (code) => {
     setTimeout(() => {
       const check = codes.access_code.filter(e => e.code === code && e.code)[0];
       if(check){
-        resolve(check.code)
+        resolve(check)
       }else{
         reject('There is no such code')
       }
