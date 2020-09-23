@@ -1,0 +1,83 @@
+.beta-access-container{
+  height: 100vh;
+  background: #ecebe6;
+}
+
+.oops-img{
+  height: 300px;
+}
+
+.access-text{
+  font-size: 30px;
+  margin: 10px 10% 0;
+  @media(max-width: 425px){
+    font-size: 15px;
+  }
+}
+
+.access-input{
+  font-size: 16px;
+  padding: 5px;
+  width: 250px;
+  border: 1.5px solid #ccc;
+  border-radius: 7px;
+  outline: none;
+  transition: .3s;
+  box-sizing: border-box;
+
+  &:focus{
+    border-color: #2c5affc2;
+    box-shadow: 0px 0px 0px 3px #8e90ff96;
+  }
+  @media(max-width: 425px){
+    width: 160px;
+  }
+}
+
+.access-btn{
+  outline: none;
+  text-decoration: none;
+  border: 1px solid #1976d2;
+  color: #1976d2; 
+  background: transparent;
+  padding: 5px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 18px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  margin-left: 5px;
+}
+
+.hint-access{
+  position: relative;
+  .hint{
+    border: 1px solid #888383;
+    padding: 2px 8px;
+    border-radius: 50%;
+    color: #888383;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .text{
+    display: none;
+    z-index: 111;
+    background: #fff;
+    position: absolute;
+    width: 200px;
+    font-size: 12px;
+    top: -45px;
+    right: 30px;
+    padding: 5px;
+    color: #888383;
+    border: 1px solid #888383;
+    border-radius: 4px;
+    @media(max-width: 768px){
+      right: inherit;
+      top: -65px;
+    }
+  }
+  .hint:hover + .text{
+    display: block;
+  }
+}

@@ -1,0 +1,14 @@
+.data-toast{
+  position: absolute;
+  top: -60px;
+  animation: toast .3s linear forwards;
+}
+
+@keyframes toast {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 10px
+  }
+}

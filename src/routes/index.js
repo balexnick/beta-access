@@ -4,14 +4,16 @@ import ProtectedRoute from './ProtectedRoute'
 import BetaAccess from 'pages/BetaAccess/BetaAccess'
 import Home from 'pages/Home/Home'
 
-const Routes = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route path='/beta-access' component={BetaAccess} />
-      <ProtectedRoute path='/' exact component={Home} />
-    </Switch>
-  </BrowserRouter>
-)
+const Routes = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <ProtectedRoute path='/' exact component={Home} />
+        <Route path='/beta-access' component={BetaAccess} />
+      </Switch>
+    </BrowserRouter>
+  )
+}
 
 
 export default Routes
